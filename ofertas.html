@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ofertas - TechZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><div class="logo">🕹️ TechZone</div></a>
+    <nav>
+      <a href="index.html">INICIO</a>
+      <a href="ofertas.html" class="active">OFERTAS</a>
+
+      <div class="dropdown">
+        <a href="#">CATEGORÍAS</a>
+        <div class="dropdown-content">
+          <a href="perifericos.html">Periféricos</a>
+          <a href="hardware.html">Hardware</a>
+        </div>
+      </div>
+
+      <a href="ubicanos.html">UBÍCANOS</a>
+    </nav>
+    <div class="icons">
+      <a href="carrito.html" class="icon-link" aria-label="Carrito de compras">🛒</a>
+      <a href="login.html" class="icon-link" aria-label="Mi cuenta">👤</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="ofertas-titulo">Ofertas Especiales</h1>
+    
+    <section class="productos">
+      <div class="producto oferta">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=RTX%203050" alt="GeForce RTX 3050 GIGABYTE"/>
+        </div>
+        <div class="producto-info">
+          <h4>GeForce RTX 3050 GIGABYTE</h4>
+          <p class="precio-original">$1.800.000</p>
+          <p class="precio-descuento">$1.500.000</p>
+          <p class="fecha-oferta">Oferta válida hasta: 30/05/2025</p>
+          <button onclick="agregarAlCarrito('GeForce RTX 3050 GIGABYTE')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto oferta">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=Corsair%20RAM" alt="CORSAIR RAM VENGEANCE PRO RGB 16GB 3200MHZ"/>
+        </div>
+        <div class="producto-info">
+          <h4>CORSAIR RAM VENGEANCE PRO RGB 16GB 3200MHZ</h4>
+          <p class="precio-original">$450.000</p>
+          <p class="precio-descuento">$380.000</p>
+          <p class="fecha-oferta">Oferta válida hasta: 15/05/2025</p>
+          <button onclick="agregarAlCarrito('CORSAIR RAM VENGEANCE PRO RGB 16GB 3200MHZ')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto oferta">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=SteelSeries%20Keyboard" alt="STEELSERIES APEX 9 MINI"/>
+        </div>
+        <div class="producto-info">
+          <h4>STEELSERIES APEX 9 MINI</h4>
+          <p class="precio-original">$850.000</p>
+          <p class="precio-descuento">$730.000</p>
+          <p class="fecha-oferta">Oferta válida hasta: 20/05/2025</p>
+          <button onclick="agregarAlCarrito('STEELSERIES APEX 9 MINI')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto oferta">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=KZ%20Earphones" alt="KZ EDX PRO"/>
+        </div>
+        <div class="producto-info">
+          <h4>KZ EDX PRO</h4>
+          <p class="precio-original">$60.000</p>
+          <p class="precio-descuento">$45.000</p>
+          <p class="fecha-oferta">Oferta válida hasta: 25/05/2025</p>
+          <button onclick="agregarAlCarrito('KZ EDX PRO')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechZone. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><div class="logo">🕹️ TechZone</div></a>
+    <nav>
+      <a href="index.html" class="active">INICIO</a>
+      <a href="ofertas.html">OFERTAS</a>
+
+      <div class="dropdown">
+        <a href="#">CATEGORÍAS</a>
+        <div class="dropdown-content">
+          <a href="perifericos.html">Periféricos</a>
+          <a href="hardware.html">Hardware</a>
+        </div>
+      </div>
+
+      <a href="ubicanos.html">UBÍCANOS</a>
+    </nav>
+
+    <div class="icons">
+      <a href="carrito.html" class="icon-link" aria-label="Carrito de compras">🛒</a>
+      <a href="login.html" class="icon-link" aria-label="Mi cuenta">👤</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="productos">
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=RTX%203050" alt="GeForce RTX 3050 GIGABYTE"/>
+        </div>
+        <div class="producto-info">
+          <h4>GeForce RTX 3050 GIGABYTE</h4>
+          <p class="precio">$1.500.000</p>
+          <button onclick="agregarAlCarrito('GeForce RTX 3050 GIGABYTE')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=Razer%20Viper%20Mini" alt="RAZER VIPER MINI"/>
+        </div>
+        <div class="producto-info">
+          <h4>RAZER VIPER MINI</h4>
+          <p class="precio">$565.000</p>
+          <button onclick="agregarAlCarrito('RAZER VIPER MINI')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=Corsair%20RAM" alt="CORSAIR RAM VENGEANCE PRO RGB 16GB 3200MHZ"/>
+        </div>
+        <div class="producto-info">
+          <h4>CORSAIR RAM VENGEANCE PRO RGB 16GB 3200MHZ</h4>
+          <p class="precio">$380.000</p>
+          <button onclick="agregarAlCarrito('CORSAIR RAM VENGEANCE PRO RGB 16GB 3200MHZ')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=MSI%20B550M" alt="BOARD MSI B550M PRO"/>
+        </div>
+        <div class="producto-info">
+          <h4>BOARD MSI B550M PRO</h4>
+          <p class="precio">$480.000</p>
+          <button onclick="agregarAlCarrito('BOARD MSI B550M PRO')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=Kingston%20SSD" alt="SSD KINGSTON M2 FURY 1TB"/>
+        </div>
+        <div class="producto-info">
+          <h4>SSD KINGSTON M2 FURY 1TB</h4>
+          <p class="precio">$510.000</p>
+          <button onclick="agregarAlCarrito('SSD KINGSTON M2 FURY 1TB')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=Intel%20i9%20CPU" alt="INTEL CORE i9-14900KF"/>
+        </div>
+        <div class="producto-info">
+          <h4>INTEL CORE i9-14900KF 36MB 3GHz - 6GHz</h4>
+          <p class="precio">$1.535.000</p>
+          <button onclick="agregarAlCarrito('INTEL CORE i9-14900KF')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=MSI%20Case%20White" alt="GABINETE MSI MAG PANO M100r BLANCO"/>
+        </div>
+        <div class="producto-info">
+          <h4>GABINETE MSI MAG PANO M100r BLANCO</h4>
+          <p class="precio">$535.000</p>
+          <button onclick="agregarAlCarrito('GABINETE MSI MAG PANO M100r BLANCO')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=SteelSeries%20Keyboard" alt="STEELSERIES APEX 9 MINI"/>
+        </div>
+        <div class="producto-info">
+          <h4>STEELSERIES APEX 9 MINI</h4>
+          <p class="precio">$730.000</p>
+          <button onclick="agregarAlCarrito('STEELSERIES APEX 9 MINI')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=KZ%20Earphones" alt="KZ EDX PRO"/>
+        </div>
+        <div class="producto-info">
+          <h4>KZ EDX PRO</h4>
+          <p class="precio">$45.000</p>
+          <button onclick="agregarAlCarrito('KZ EDX PRO')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen">
+          <img src="https://placeholder.svg?height=200&width=200&query=Corsair%20Liquid%20Cooling" alt="REFRIGERACION LIQUIDA CORSAIR ICUE LINK 360 RX"/>
+        </div>
+        <div class="producto-info">
+          <h4>REFRIGERACION LIQUIDA CORSAIR ICUE LINK 360 RX</h4>
+          <p class="precio">$1.400.000</p>
+          <button onclick="agregarAlCarrito('REFRIGERACION LIQUIDA CORSAIR ICUE LINK 360 RX')">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechZone. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script src="js/common.js"></script>
+</body>
+</html>

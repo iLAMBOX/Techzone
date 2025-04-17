@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ubícanos - TechZone</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <a href="index.html"><div class="logo">🕹️ TechZone</div></a>
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="ofertas.html">OFERTAS</a>
+
+    <div class="dropdown">
+      <a href="#">CATEGORÍAS</a>
+      <div class="dropdown-content">
+        <a href="perifericos.html">Periféricos</a>
+        <a href="hardware.html">Hardware</a>
+      </div>
+    </div>
+
+    <a href="ubicanos.html" class="active">UBÍCANOS</a>
+  </nav>
+  <div class="icons">
+    <a href="carrito.html" class="icon-link" aria-label="Carrito de compras">🛒</a>
+    <a href="login.html" class="icon-link" aria-label="Mi cuenta">👤</a>
+  </div>
+</header>
+
+<main>
+  <h1 class="ubicanos-titulo">Ubícanos</h1>
+  
+  <div class="ubicanos-container">
+    <div class="ubicanos-info">
+      <h2>Nuestra Tienda</h2>
+      
+      <div class="info-item">
+        <h3>📍 Dirección</h3>
+        <p>Cra. 48 #10-45</p>
+        <p>Local 214</p>
+        <p>Medellin, Colombia</p>
+      </div>
+      
+      <div class="info-item">
+        <h3>🕒 Horario de Atención</h3>
+        <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+        <p>Sábados: 10:00 AM - 5:00 PM</p>
+        <p>Domingos: Cerrado</p>
+      </div>
+      
+      <div class="info-item">
+        <h3>📞 Teléfono</h3>
+        <p>(+123) 456-7890</p>
+      </div>
+      
+      <div class="info-item">
+        <h3>✉️ Correo Electrónico</h3>
+        <p>contacto@techzone.com</p>
+      </div>
+    </div>
+    
+    <div class="ubicanos-mapa">
+      <div class="mapa-placeholder">
+        <div class="mapa-content">
+          <div style="text-align: center;">
+            <a href="https://maps.app.goo.gl/15UKR9FgZ3sBgtJu7"><img src="RECURSOS/MAPS.png" alt="Mapa de ubicación" style="max-width: 100%; height: auto;"></a>
+          </div>   
+          <p>TechZone</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="contacto-container">
+    <h2>Contáctanos</h2>
+    
+    <form class="contacto-form">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" placeholder="tu@email.com">
+      </div>
+      
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+      </div>
+      
+      <button type="submit" class="submit-button">Enviar Mensaje</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 TechZone. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+  document.querySelector('.contacto-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('¡Mensaje enviado! Nos pondremos en contacto contigo pronto.');
+    this.reset();
+  });
+</script>
+</body>
+</html>

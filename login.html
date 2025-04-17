@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión - TechZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html"><div class="logo">🕹️ TechZone</div></a>
+    <nav>
+      <a href="index.html">INICIO</a>
+      <a href="ofertas.html">OFERTAS</a>
+
+      <div class="dropdown">
+        <a href="#">CATEGORÍAS</a>
+        <div class="dropdown-content">
+          <a href="perifericos.html">Periféricos</a>
+          <a href="hardware.html">Hardware</a>
+        </div>
+      </div>
+
+      <a href="ubicanos.html">UBÍCANOS</a>
+    </nav>
+    <div class="icons">
+      <a href="carrito.html" class="icon-link" aria-label="Carrito de compras">🛒</a>
+      <a href="login.html" class="icon-link active" aria-label="Mi cuenta">👤</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-container">
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="showTab('login')">Iniciar Sesión</button>
+        <button class="auth-tab" onclick="showTab('register')">Registrarse</button>
+      </div>
+      
+      <div id="login-form" class="auth-form active">
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="return handleLogin(event)">
+          <div class="form-group">
+            <label for="login-email">Correo Electrónico</label>
+            <input type="email" id="login-email" required placeholder="tu@email.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="login-password">Contraseña</label>
+            <input type="password" id="login-password" required placeholder="Tu contraseña">
+          </div>
+          
+          <div class="form-options">
+            <div class="remember-me">
+              <input type="checkbox" id="remember">
+              <label for="remember">Recordarme</label>
+            </div>
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+          </div>
+          
+          <button type="submit" class="auth-button">Iniciar Sesión</button>
+        </form>
+      </div>
+      
+      <div id="register-form" class="auth-form">
+        <h2>Crear Cuenta</h2>
+        <form onsubmit="return handleRegister(event)">
+          <div class="form-group">
+            <label for="register-name">Nombre Completo</label>
+            <input type="text" id="register-name" required placeholder="Tu nombre completo">
+          </div>
+          
+          <div class="form-group">
+            <label for="register-email">Correo Electrónico</label>
+            <input type="email" id="register-email" required placeholder="tu@email.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="register-password">Contraseña</label>
+            <input type="password" id="register-password" required placeholder="Mínimo 8 caracteres">
+          </div>
+          
+          <div class="form-group">
+            <label for="register-confirm">Confirmar Contraseña</label>
+            <input type="password" id="register-confirm" required placeholder="Confirma tu contraseña">
+          </div>
+          
+          <div class="form-options">
+            <div class="terms">
+              <input type="checkbox" id="terms" required>
+              <label for="terms">Acepto los <a href="#">Términos y Condiciones</a></label>
+            </div>
+          </div>
+          
+          <button type="submit" class="auth-button">Crear Cuenta</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TechZone. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script src="js/common.js"></script>
+  <script>
+    function showTab(tabName) {
+      // Ocultar todos los formularios
+      document.querySelectorAll('.auth-form').forEach(form => {
+        form.classList.remove('active');
+      });
+      
+      // Desactivar todas las pestañas
+      document.querySelectorAll('.auth-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      // Mostrar el formulario seleccionado
+      document.getElementById(tabName + '-form').classList.add('active');
+      
+      // Activar la pestaña seleccionada
+      document.querySelectorAll('.auth-tab').forEach(tab => {
+        if (tab.textContent.toLowerCase().includes(tabName === 'login' ? 'iniciar' : 'registr')) {
+          tab.classList.add('active');
+        }
+      });
+    }
+    
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      
+      // Aquí iría la lógica de autenticación real
+      // Por ahora, solo simulamos un inicio de sesión exitoso
+      alert(`Inicio de sesión exitoso para ${email}`);
+      window.location.href = 'index.html';
+      return false;
+    }
+    
+    function handleRegister(event) {
+      event.preventDefault();
+      const name = document.getElementById('register-name').value;
+      const email = document.getElementById('register-email').value;
+      const password = document.getElementById('register-password').value;
+      const confirm = document.getElementById('register-confirm').value;
+      
+      // Validación básica
+      if (password !== confirm) {
+        alert('Las contraseñas no coinciden');
+        return false;
+      }
+      
+      if (password.length < 8) {
+        alert('La contraseña debe tener al menos 8 caracteres');
+        return false;
+      }
+      
+      // Aquí iría la lógica de registro real
+      // Por ahora, solo simulamos un registro exitoso
+      alert(`Cuenta creada exitosamente para ${name} (${email})`);
+      window.location.href = 'index.html';
+      return false;
+    }
+  </script>
+</body>
+</html>
